@@ -33,28 +33,35 @@ public class App {
         System.out.println("Ingrese contraseña");
         password = sc.next();
 
-        System.out.println("La contrasaña es " + password);
-        System.out.println("El usuario es " + username);
-
         // Validación del username
         boolean userExist = false;
-    
+        String []user=new String[2];
 
-        for (String[] user: userList) {
+        for (String[] u: userList) {
 
-            if (username.equals(user[0])) {
+            if (username.equals(u[0])) {
 
                 userExist = true;
-
+                user = u; //user almacena el usuario encontrado (solo 1) a los elementos de u de arrays string
             }
         }
-        if (userExist) {
 
+        if (userExist) {
             System.out.println("El usuario existe");
+
+        //Validar contraseña 
+        if ( password.equals(user[1])){
+            System.out.println("BIENVENIDO");
+        }else{
+            System.out.println("La contraseña no valido");
+        }
 
         } else {
             System.out.println("El usuario no existe");
         }
+
+        
+        
 
     }
 }
