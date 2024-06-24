@@ -4,29 +4,29 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         // BASE DE DATOS
-		// Usuarios
+		// arraylist de Usuarios
         ArrayList<String[]> userList = new ArrayList<>();
 
-		// usuarios
+		// creando usuarios
         String[] user1 = { "Jhordan", "123" };
         String[] user2 = { "Manuel", "145" };
         String[] user3 = { "Mirella", "12" };
         String[] user4 = { "Roxi", "14" };
 
-		// añadiedo usuarios a la base de datos
+		// añadiedo usuarios a la lista de usuarios
         userList.add(user1);
         userList.add(user2);
         userList.add(user3);
         userList.add(user4);
 
-		// imprimiendo tamaña de base de datos y todos los nombres de los usuarios
+		// imprimiendo tamaña de la lista de usuarios y todos los nombres de los usuarios
         System.out.println(userList.size());
         for (String[] user : userList) {
             System.out.println(user[0]);
         }
 
 		// LOGIN
-        // variables
+        // definiendo variables
         String password, username;
         Scanner sc = new Scanner(System.in);
 
@@ -53,6 +53,7 @@ public class App {
             System.out.println("El usuario existe");
 
 			//Validar contraseña 
+			// comparando el password ingresado por teclado con el del usuario encontrado
 			if ( password.equals(user[1])) {
 				System.out.println("BIENVENIDO");
 			} else {
