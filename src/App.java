@@ -19,6 +19,7 @@ public class App {
         userList.add(new User("Mirella", "234"));
         userList.add(new User("Leo", "566"));
         userList.add(new User("Kaory", "345"));
+        userList.add(new User("Roxi", "1070"));
         
 		// imprimiendo tamaña de la lista de usuarios y todos los nombres de los usuarios
         
@@ -40,12 +41,12 @@ public class App {
 
         // Validación del nombre de usuario
         boolean userExist = false;
-        String []user=new String[2];
+        User user = new User(null,null);
 
 		// recorrer todos los usuarios
-        for (String[] u: userList) {
+        for (User u: userList) {
 			// buscar algun usuario de base de datos que sea igual al ingresado por teclado
-            if (username.equals(u[0])) {
+            if (username.equals(u.getUsuario())) {
                 userExist = true;
                 user = u; //user almacena el usuario encontrado
             }
@@ -56,10 +57,10 @@ public class App {
 
 			//Validar contraseña 
 			// comparando el password ingresado por teclado con el del usuario encontrado
-			if ( password.equals(user[1])) {
+			if ( password.equals(user.getPasword())) {
 				System.out.println("BIENVENIDO");
 			} else {
-				System.out.println("La contraseña no valido");
+				System.out.println("La contraseña no valida");
 			}
         } else {
             System.out.println("El usuario no existe");
