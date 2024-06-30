@@ -10,26 +10,24 @@ public class App {
     public static void main(String[] args) {
         // BASE DE DATOS
 		// arraylist de Usuarios
-        ArrayList<String[]> userList = new ArrayList<>();
+        ArrayList<User> userList = new ArrayList<>();
+        
+        
+        // Añadiendo usuarios a ArrayList 
 
-        String[] user1 = { "Jhordan", "123" };
-        String[] user2 = { "Manuel", "145" };
-        String[] user3 = { "Mirella", "12" };
-        String[] user4 = { "14", "Roxi" };
- 
-		// añadiedo usuarios a la lista de usuarios
-        userList.add(user1);
-        userList.add(user2);
-        userList.add(user3);
-        userList.add(user4);
-
+        userList.add(new User("Manuel", "145"));
+        userList.add(new User("Mirella", "234"));
+        userList.add(new User("Leo", "566"));
+        userList.add(new User("Kaory", "345"));
+        
 		// imprimiendo tamaña de la lista de usuarios y todos los nombres de los usuarios
-        System.out.println(userList.size());
-        for (String[] user : userList) {
-            System.out.println(user[0]);
+        
+        for( User u1: userList  ){
+            System.out.println(" Los usuarios es:  "+ u1.getUsuario() );
+            
         }
-
-		// LOGIN
+	
+        	// LOGIN
         // definiendo variables
         String password, username;
         Scanner sc = new Scanner(System.in);
