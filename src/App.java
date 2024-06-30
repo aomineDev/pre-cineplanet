@@ -1,3 +1,8 @@
+// Crear la clase user - Roxana
+// Modificar base de datos - Manuel
+// Modificar la logica - Keyla
+// Refactor de la aplicacion - Jhordam
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,12 +12,11 @@ public class App {
 		// arraylist de Usuarios
         ArrayList<String[]> userList = new ArrayList<>();
 
-		// creando usuarios
         String[] user1 = { "Jhordan", "123" };
         String[] user2 = { "Manuel", "145" };
         String[] user3 = { "Mirella", "12" };
-        String[] user4 = { "Roxi", "14" };
-
+        String[] user4 = { "14", "Roxi" };
+ 
 		// añadiedo usuarios a la lista de usuarios
         userList.add(user1);
         userList.add(user2);
