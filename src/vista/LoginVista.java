@@ -31,7 +31,7 @@ public class LoginVista {
             boolean passVerify = lg.ValidaPass(password, user);
 
 			if ( passVerify) {
-				System.out.println("BIENVENIDO" + user.getUsuario());
+				System.out.println("BIENVENIDO");
 			} else {
 				System.out.println("La contraseña no valida");
 			}
