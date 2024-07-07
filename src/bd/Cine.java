@@ -10,7 +10,9 @@ public class Cine {
     private ArrayList<User> userList;
     private ArrayList<Movie>movielist;
 
+    
     //metodo constructor vacio
+    
     public Cine() {
 
         userList = new ArrayList<>();
