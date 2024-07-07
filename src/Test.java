@@ -1,29 +1,26 @@
+class Prueba{
+
+    static public int numero=5;
+    static public int Sumar(int a, int b){
+        return a+b;
+    }
+
+}
 public class Test {
+
 
     public static void main(String[] args) {
         
-        int number = getNumber(3);
-        System.out.println("El numero final es: "+number);
+        
+        int r=Prueba.Sumar(3, 6);
+        
 
+
+        System.out.println("Resultado  " + r);
+        System.out.println(Prueba.numero);
     }
 
-    static int getNumber(int n) {
-
-        for (int i = 0; i < 101; i++) {
-
-            System.out.println(i);
-
-            if(i == n) {
-                System.out.println("Bucle detenido");
-                return n;
-            }
-
-        }
-
-        System.out.println("Bucle finalizado");
-
-        return 100;
-
-    }
     
+    
+
 }
