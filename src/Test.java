@@ -11,13 +11,12 @@ public class Test {
 
     public static void main(String[] args) {
         
+        int numero1[] = {1,2,3};
+        int numero2[] = numero1;
         
-        int r=Prueba.Sumar(3, 6);
-        
+        numero2[0] = 4;
 
-
-        System.out.println("Resultado  " + r);
-        System.out.println(Prueba.numero);
+        System.out.println(numero1[0]);
     }
 
     

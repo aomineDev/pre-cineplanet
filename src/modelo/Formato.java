@@ -8,7 +8,7 @@ public class Formato {
 
     public Formato(String formato, ArrayList<Fecha> fechalist){
         this.formato = formato;
-        this.fechalist = fechalist;
+        this.fechalist = new ArrayList<>(fechalist);
     }
 
     public String getFormato() {

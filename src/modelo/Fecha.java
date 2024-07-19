@@ -10,7 +10,7 @@ public class Fecha {
 
     public Fecha(LocalDate fecha, ArrayList<Horario> horarioList ){
         this.fecha= fecha;
-        this.horarioList= horarioList;
+        this.horarioList= new ArrayList<>(horarioList);
     }
 
     //metodo para obtener el valor de los atributos con get

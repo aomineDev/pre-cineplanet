@@ -8,9 +8,9 @@ public class Movie {
     private ArrayList<Formato> formatoList;
 
     //metodo constructor 
-    public Movie (String titulo){
+    public Movie (String titulo, ArrayList<Formato> formatoList){
         this.titulo= titulo;
-        //this.formatoList= formatoList;
+        this.formatoList = new ArrayList<>(formatoList);
     }
 
     //metodo get

@@ -1,5 +1,6 @@
 package tienda;
 
+import modelo.Movie;
 import modelo.User;
 
 public class Tienda {
@@ -7,6 +8,7 @@ public class Tienda {
     //atributos
     private static Tienda instance;
     User user;
+    Movie selectedMovie;
 
     private Tienda () {
 
@@ -28,6 +30,14 @@ public class Tienda {
 
     public User getUser() {
         return user;
+    }
+
+    public void setSelectedMovie(Movie selectedMovie) {
+        this.selectedMovie = selectedMovie;
+    }
+
+    public Movie getSelectedMovie() {
+        return selectedMovie;
     }
     
 }

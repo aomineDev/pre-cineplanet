@@ -1,10 +1,10 @@
 import vista.LoginVista;
-import vista.MovieVista;
+import vista.MoviesVista;
 
 public class App {
     public static void main(String[] args) {
         
-        MovieVista.main(args);
+        MoviesVista.main(args);
         
     }
 }

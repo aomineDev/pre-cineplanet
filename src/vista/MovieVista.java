@@ -1,21 +1,27 @@
 package vista;
 
 import controlador.MovieControlador;
+import modelo.Formato;
 import modelo.Movie;
-import tienda.Tienda;
 
 public class MovieVista {
-    public static void main(String[] args) {
 
-        MovieControlador mc = new MovieControlador();
-        Tienda tienda = Tienda.getInstance();
+    public static void main(String[] args) {
         
-        System.out.println("");
-        System.out.println("Hola de nuevo: " + tienda.getUser().getUsuario());
-        
-        for(Movie movie : mc.getMovies()) {
-            System.out.println(movie.getTitulo());
+        MovieControlador movieControlador = new MovieControlador();
+        Movie movie = movieControlador.getSelectedMovie();
+
+        System.out.println();
+        System.out.println(" ----- PELICULA ----- ");
+        System.out.println(movie.getTitulo());
+        for(Formato fmt : movie.getFormatoList()) {
+
+            System.out.println(fmt.getFormato());
+            System.out.println(fmt.getFechalist().get(0).getFecha());
+
         }
-         
+
+
     }
+    
 }

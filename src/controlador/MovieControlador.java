@@ -1,23 +1,23 @@
 package controlador;
 
-import java.util.ArrayList;
-
-import bd.Cine;
 import modelo.Movie;
+import tienda.Tienda;
 
 public class MovieControlador {
 
-    //atributos
-    private Cine cine;
-    private ArrayList<Movie> movieList;
+   private Tienda tienda;
+   private Movie selectedMovie;
 
-    //metodo construtor
-    public MovieControlador () {
-        cine = Cine.getInstace();
-        movieList = cine.getMovielist();
-    }
+   public MovieControlador() {
 
-    public ArrayList<Movie> getMovies() {
-        return movieList;
-    }
+        tienda = Tienda.getInstance();
+
+   }
+
+   public Movie getSelectedMovie() {
+
+        return tienda.getSelectedMovie();
+
+   }
+    
 }

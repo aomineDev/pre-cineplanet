@@ -34,7 +34,7 @@ public class LoginVista {
 
 			if ( passVerify) {
 
-				MovieVista.main(args);
+				MoviesVista.main(args);
 
 			} else {
 				System.out.println("La contraseña no valida");
