@@ -14,17 +14,19 @@ public class Butaca {
         {"V","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L"},
         {"L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L"},
     };
-    public Butaca(int butacaId,int 
-    numeroSala){
+    public Butaca(int butacaId, int numeroSala){
         this.butacaId= butacaId;
         this.numeroSala= numeroSala;
     }
+
     public int getButacaId() {
         return butacaId;
     }
+
     public int getNumeroSala() {
         return numeroSala;
     }
+    
     public String[][] getButacas(){
         return butacas;
     }

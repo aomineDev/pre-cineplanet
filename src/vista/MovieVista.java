@@ -1,7 +1,11 @@
 package vista;
 
+import java.util.ArrayList;
+
 import controlador.MovieControlador;
+import modelo.Fecha;
 import modelo.Formato;
+import modelo.Horario;
 import modelo.Movie;
 
 public class MovieVista {
@@ -11,16 +15,35 @@ public class MovieVista {
         MovieControlador movieControlador = new MovieControlador();
         Movie movie = movieControlador.getSelectedMovie();
 
+        ArrayList<Formato> formatoList = movie.getFormatoList();
+        ArrayList<Fecha> fechaList = formatoList.get(0).getFechalist(); 
+        ArrayList<Horario> horaList = fechaList.get(0).getHorarioList();
+
         System.out.println();
         System.out.println(" ----- PELICULA ----- ");
         System.out.println(movie.getTitulo());
-        for(Formato fmt : movie.getFormatoList()) {
+
+        for(Formato fmt : formatoList) {
 
             System.out.println(fmt.getFormato());
-            System.out.println(fmt.getFechalist().get(0).getFecha());
+            
+        }
+
+        for(Fecha fecha : fechaList) {
+
+            System.out.println(fecha.getFecha());
 
         }
 
+        for(Horario horario : horaList) {
+
+            System.out.println(horario.getHora());
+
+        }
+
+        movieControlador.setSelectedIdButaca(horaList.get(0).getButacaId());
+
+        ButacaVista.main(args);
 
     }
     

@@ -1,5 +1,6 @@
 package tienda;
 
+import modelo.Butaca;
 import modelo.Movie;
 import modelo.User;
 
@@ -9,6 +10,7 @@ public class Tienda {
     private static Tienda instance;
     User user;
     Movie selectedMovie;
+    int selectedIdButaca;
 
     private Tienda () {
 
@@ -38,6 +40,14 @@ public class Tienda {
 
     public Movie getSelectedMovie() {
         return selectedMovie;
+    }
+
+    public void setSelectedIdButaca(int selectedIdButaca) {
+        this.selectedIdButaca = selectedIdButaca;
+    }
+
+    public int getSelectedIdButaca() {
+        return selectedIdButaca;
     }
     
 }

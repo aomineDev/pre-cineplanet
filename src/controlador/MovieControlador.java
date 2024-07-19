@@ -19,5 +19,10 @@ public class MovieControlador {
         return tienda.getSelectedMovie();
 
    }
+
+   public void setSelectedIdButaca(int id) {
+     tienda.setSelectedIdButaca(id);
+   }
+
     
 }

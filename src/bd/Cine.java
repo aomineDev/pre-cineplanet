@@ -59,7 +59,6 @@ public class Cine {
         //Añadiendo lista de butacas
         butacaList.add(new Butaca(2,1 ));
 
-
         //creando fecha 2
         fechaList.clear();
         fechaList.add(new Fecha(LocalDate.of(2024, 07, 20), horarioList));
