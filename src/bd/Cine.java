@@ -57,7 +57,7 @@ public class Cine {
         horarioList.add(new Horario(LocalTime.of(17, 20), 2));
 
         //Añadiendo lista de butacas
-        butacaList.add(new Butaca(2, 1));
+        butacaList.add(new Butaca(2,1 ));
 
 
         //creando fecha 2
@@ -71,10 +71,6 @@ public class Cine {
         movielist.add(new Movie("Intensamente 2", formatoList));
         movielist.add(new Movie("BAD BOYS", formatoList));
         movielist.add(new Movie("Deadpool", formatoList));
-
-
-        
-
 
 
     }
@@ -97,6 +93,9 @@ public class Cine {
     
     public ArrayList<Movie> getMovielist() {
         return movielist;
+    }
+    public ArrayList <Butaca> geButacas() {
+        return butacaList;
     }
 
 }
