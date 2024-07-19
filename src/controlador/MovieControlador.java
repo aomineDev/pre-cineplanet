@@ -13,7 +13,7 @@ public class MovieControlador {
 
     //metodo construtor
     public MovieControlador () {
-        cine = new Cine();
+        cine = Cine.getInstace();
         movieList = cine.getMovielist();
     }
 

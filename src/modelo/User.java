@@ -1,5 +1,6 @@
 package modelo;
 public class User {
+
     //atributos
     private String usuario;
     private String pasword;
@@ -18,7 +19,5 @@ public class User {
     public String getPasword (){
         return this.pasword;
     }
-
-    
 
 }

@@ -8,15 +8,16 @@ import modelo.Movie;
 import modelo.User;
 
 public class Cine {
-//atributos
+    
+    //atributos
+    private static Cine instace;
     private ArrayList<User> userList;
     private ArrayList<Movie>movielist;
     private ArrayList<Horario> horarioList;
 
     
     //metodo constructor vacio
-    
-    public Cine() {
+    private Cine() {
 
         userList = new ArrayList<>();
         movielist = new ArrayList<>();
@@ -31,8 +32,7 @@ public class Cine {
         
         //Creando Horarios 
         horarioList.add(new Horario(LocalTime.of(16, 30), 1));
-        
-
+ 
 
         //Añadiendo peliculas a Arraylist
         movielist.add(new Movie("Intensamente 2"));
@@ -40,9 +40,22 @@ public class Cine {
         movielist.add(new Movie("Deadpool"));
     }
 
+    //singleton
+    public static Cine getInstace() {
+        
+        if (instace == null) {
+
+            instace = new Cine();
+
+        }
+        
+        return instace;
+    }
+
     public ArrayList<User> getUserList() {
         return userList;
     }
+    
     public ArrayList<Movie> getMovielist() {
         return movielist;
     }

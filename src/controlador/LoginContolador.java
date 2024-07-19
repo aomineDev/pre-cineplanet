@@ -11,7 +11,7 @@ public class LoginContolador {
 
     public LoginContolador() {
 
-        cinedb = new Cine();
+        cinedb = Cine.getInstace();
         userList = cinedb.getUserList();
 
     }

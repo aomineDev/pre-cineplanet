@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 import controlador.LoginContolador;
 import modelo.User;
+import tienda.Tienda;
 
 public class LoginVista {
     
     public static void main(String[] args) {
         
         LoginContolador lg = new LoginContolador();
+        Tienda tienda = Tienda.getInstance();
 
         // definiendo variables
         String password, username;
@@ -24,14 +26,16 @@ public class LoginVista {
         User user = lg.ValidaUsername(username);
 
         if (user != null) {
-            System.out.println("El usuario existe");
 
-			//Validar contraseña 
+			// Validar contraseña 
 			// comparando el password ingresado por teclado con el del usuario encontrado
             boolean passVerify = lg.ValidaPass(password, user);
+            tienda.setUser(user);
 
 			if ( passVerify) {
-				System.out.println("BIENVENIDO");
+
+				MovieVista.main(args);
+
 			} else {
 				System.out.println("La contraseña no valida");
 			}
