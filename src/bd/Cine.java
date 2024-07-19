@@ -9,6 +9,7 @@ import modelo.Formato;
 import modelo.Horario;
 import modelo.Movie;
 import modelo.User;
+import modelo.Butaca;
 
 public class Cine {
     
@@ -19,14 +20,14 @@ public class Cine {
     private ArrayList<Horario> horarioList;
     private ArrayList<Fecha> fechaList;
     private ArrayList<Formato> formatoList;
-
+    private ArrayList<Butaca> butacaList;
     
     //metodo constructor vacio
     private Cine() {
 
         userList = new ArrayList<>();
         movielist = new ArrayList<>();
-
+        butacaList = new ArrayList<>();
 
         horarioList = new ArrayList<>();
         fechaList = new ArrayList<>();
@@ -41,6 +42,7 @@ public class Cine {
         
         //Creando Horarios 1 
         horarioList.add(new Horario(LocalTime.of(16, 30), 1)); 
+        butacaList.add(new Butaca(1, 1));
 
         //creando fechas 1
         fechaList.add(new Fecha(LocalDate.of(2024, 07, 19), horarioList));
@@ -54,6 +56,10 @@ public class Cine {
         horarioList.clear();
         horarioList.add(new Horario(LocalTime.of(17, 20), 2));
 
+        //Añadiendo lista de butacas
+        butacaList.add(new Butaca(2, 1));
+
+
         //creando fecha 2
         fechaList.clear();
         fechaList.add(new Fecha(LocalDate.of(2024, 07, 20), horarioList));
@@ -65,6 +71,12 @@ public class Cine {
         movielist.add(new Movie("Intensamente 2", formatoList));
         movielist.add(new Movie("BAD BOYS", formatoList));
         movielist.add(new Movie("Deadpool", formatoList));
+
+
+        
+
+
+
     }
 
     //singleton
