@@ -18,12 +18,17 @@ public class ButacaVista {
 
             for (int j = 0; j < butacas[i].length; j++) {
 
-                System.out.print(butacas[i][j]);
+                if (butacas[i][j] .equals("V")){
+                   System.out.print("     ");
+                }else if (butacas[i][j] .equals("L")){
 
+                    System.out.print(" - " + butacaControlador.getPosicionButaca(i, j)  );
+                }
+            
             }
+         
 
             System.out.println("");
-            
         }
 
     }
