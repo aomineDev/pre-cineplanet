@@ -24,7 +24,7 @@ public class ButacaControlador {
 
         int id = tienda.getSelectedIdButaca();
 
-        for (Butaca butaca : cine.geButacas()) {
+        for (Butaca butaca : cine.getButacas()) {
 
             if(id == butaca.getButacaId()) {
 

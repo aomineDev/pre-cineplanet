@@ -93,7 +93,7 @@ public class Cine {
     public ArrayList<Movie> getMovielist() {
         return movielist;
     }
-    public ArrayList <Butaca> geButacas() {
+    public ArrayList <Butaca> getButacas() {
         return butacaList;
     }
 

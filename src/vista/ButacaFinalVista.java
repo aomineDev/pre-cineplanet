@@ -3,10 +3,8 @@ package vista;
 import controlador.ButacaControlador;
 import modelo.Butaca;
 
-public class ButacaVista {
-
+public class ButacaFinalVista {
     public static void main(String[] args) {
-        
         ButacaControlador butacaControlador = new ButacaControlador();
         Butaca butaca = butacaControlador.getButaca();
         String[][] butacas = butaca.getButacas();
@@ -27,21 +25,14 @@ public class ButacaVista {
 
                 }
             else if (butacas[i][j] .equals("O")){
-            System.out.println( " - X" );
+            System.out.print( " - X" );
             }
         }
 
             System.out.println("");
         }
 
-        butacaControlador.addSelectedButacas("E4");
-        butacaControlador.addSelectedButacas("B17");
-        butacaControlador.addSelectedButacas("F2");
-
-        //butacaControlador.deleteSelectedButacas("B13");
-
         System.out.println("Butacas seleccionadas: " + butacaControlador.getSelectedButacaToString());
-        VoucherVista.main(args);
+
     }
-    
 }
