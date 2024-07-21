@@ -15,9 +15,11 @@ public class MoviesControlador {
 
     //metodo construtor
     public MoviesControlador () {
+
         cine = Cine.getInstace();
         tienda = Tienda.getInstance();
         movieList = cine.getMovielist();
+        
     }
 
     public ArrayList<Movie> getMovies() {

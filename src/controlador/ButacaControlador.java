@@ -6,8 +6,15 @@ import tienda.Tienda;
 
 public class ButacaControlador {
 
-    Tienda tienda = Tienda.getInstance();
-    Cine cine = Cine.getInstace();
+    Tienda tienda;
+    Cine cine;
+
+    public ButacaControlador() {
+
+        tienda = Tienda.getInstance();
+        cine = Cine.getInstace();
+
+    }
 
     public Butaca getButaca() {
 
@@ -31,27 +38,37 @@ public class ButacaControlador {
         String filacon="";
 
         if (fila == 0){
-            filacon= "A";
-        }else if (fila ==1){
-            filacon= "B";
-        }
 
-        else if (fila ==2){
+            filacon= "A";
+
+        }else if (fila == 1){
+
+            filacon= "B";
+
+        }else if (fila == 2){
+
             filacon= "C";
 
-        }else if (fila ==3){
+        }else if (fila == 3){
+
             filacon= "D";
 
-        }else if (fila ==4){
+        }else if (fila == 4){
+
             filacon= "E";
 
-        }else if (fila ==5){
-            filacon= "F";
+        }else if (fila == 5){
 
-        }else if (fila ==6){
+            filacon= "F";
+            
+        }else if (fila == 6){
+
             filacon= "G";
-        }else if (fila ==7){
+
+        }else if (fila == 7){
+
              filacon= "H";
+
         } 
      return filacon+(columna+1);
     

@@ -1,6 +1,5 @@
 package tienda;
 
-import modelo.Butaca;
 import modelo.Movie;
 import modelo.User;
 
