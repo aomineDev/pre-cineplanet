@@ -1,19 +1,23 @@
 package controlador;
 
+import java.util.ArrayList;
+
 import bd.Cine;
 import modelo.Butaca;
 import tienda.Tienda;
 
 public class ButacaControlador {
 
-    Tienda tienda;
-    Cine cine;
+    private Tienda tienda;
+    private Cine cine;
+    private ArrayList<String> selectedButacas;
 
     public ButacaControlador() {
 
         tienda = Tienda.getInstance();
         cine = Cine.getInstace();
-
+        selectedButacas = tienda.getSelectedButacas();
+        
     }
 
     public Butaca getButaca() {
@@ -33,7 +37,7 @@ public class ButacaControlador {
         return null;
 
     }
-    public String getPosicionButaca(int fila, int columna){
+    public String getPosicionButaca(int fila, int columna){ 
        
         String filacon="";
 
@@ -72,6 +76,36 @@ public class ButacaControlador {
         } 
      return filacon+(columna+1);
     
+    }
+
+    public ArrayList<String> getSelectedButacas() {
+
+        return selectedButacas;
+
+    }
+
+    //añadir seleccion de butacas
+    public void addSelectedButacas(String positionButaca) {
+
+        selectedButacas.add(positionButaca);
+
+    }
+
+    public void deleteSelectedButacas(String positionButaca) {
+
+        int index = selectedButacas.indexOf(positionButaca);
+
+        selectedButacas.remove(index);
+
+    }
+
+    public String getSelectedButacaToString() {
+
+        String str = selectedButacas.toString();
+
+        //return str.substring(1, str.length()-1);
+
+        return str.replace("[", "").replace("]", "");
     }
     
 }

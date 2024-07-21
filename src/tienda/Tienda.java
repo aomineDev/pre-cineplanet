@@ -1,5 +1,7 @@
 package tienda;
 
+import java.util.ArrayList;
+
 import modelo.Movie;
 import modelo.User;
 
@@ -10,8 +12,11 @@ public class Tienda {
     User user;
     Movie selectedMovie;
     int selectedIdButaca;
+    ArrayList<String> selectedButacas;
 
     private Tienda () {
+
+        selectedButacas = new ArrayList<>();
 
     }
 
@@ -47,6 +52,10 @@ public class Tienda {
 
     public int getSelectedIdButaca() {
         return selectedIdButaca;
+    }
+
+    public ArrayList<String> getSelectedButacas() {
+        return selectedButacas;
     }
     
 }

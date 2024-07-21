@@ -16,7 +16,7 @@ public class MovieVista {
         Movie movie = movieControlador.getSelectedMovie();
 
         ArrayList<Formato> formatoList = movie.getFormatoList();
-        ArrayList<Fecha> fechaList = formatoList.get(0).getFechalist(); 
+        ArrayList<Fecha> fechaList = formatoList.get(1).getFechalist(); 
         ArrayList<Horario> horaList = fechaList.get(0).getHorarioList();
 
         System.out.println();

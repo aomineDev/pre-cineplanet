@@ -57,7 +57,7 @@ public class Cine {
         horarioList.add(new Horario(LocalTime.of(17, 20), 2));
 
         //Añadiendo lista de butacas
-        butacaList.add(new Butaca(2,1 ));
+        butacaList.add(new Butaca(2,1));
 
         //creando fecha 2
         fechaList.clear();

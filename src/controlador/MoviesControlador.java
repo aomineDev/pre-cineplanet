@@ -29,7 +29,7 @@ public class MoviesControlador {
     //selec pelis
     public void SelecMovie() {
 
-        tienda.setSelectedMovie(movieList.get(1));
+        tienda.setSelectedMovie(movieList.get(2));
 
     }
 }

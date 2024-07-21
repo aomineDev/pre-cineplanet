@@ -14,6 +14,7 @@ public class Butaca {
         {"V","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L"},
         {"L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L","L"},
     };
+    
     public Butaca(int butacaId, int numeroSala){
         this.butacaId= butacaId;
         this.numeroSala= numeroSala;
@@ -29,6 +30,12 @@ public class Butaca {
     
     public String[][] getButacas(){
         return butacas;
+    }
+
+    public void updateEstadoButaca(int fila, int columna) {
+
+        butacas[fila][columna] = "O";
+
     }
 
 }

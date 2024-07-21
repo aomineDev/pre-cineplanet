@@ -26,10 +26,17 @@ public class ButacaVista {
                 }
             
             }
-         
 
             System.out.println("");
         }
+
+        butacaControlador.addSelectedButacas("A3");
+        butacaControlador.addSelectedButacas("B13");
+        butacaControlador.addSelectedButacas("H14");
+
+        butacaControlador.deleteSelectedButacas("B13");
+
+        System.out.println("Butacas seleccionadas: " + butacaControlador.getSelectedButacaToString());
 
     }
     
