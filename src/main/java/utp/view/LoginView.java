@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import utp.App;
 import utp.controller.LoginController;
 import utp.model.User;
 
@@ -34,6 +35,7 @@ public class LoginView {
             if(verifyPassword) {
 
                 System.out.println("BIENVENIDO");
+                App.setRoot("movieView");
 
             }
 
