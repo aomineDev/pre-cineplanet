@@ -3,7 +3,15 @@ package utp.model;
 public class Seat {
     private int seatId;
     private int roomNumber;
-    private String[][] seats = new String[][]{{"V", "L", "L", "L", "L", "L", "V", "V", "V", "V", "V", "V", "L", "L", "L", "L", "V", "V", "V"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, {"L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}};
+    private String[][] seats = new String[][]{
+      {"V", "L", "L", "L", "L", "L", "V", "V", "V", "V", "V", "V", "L", "L", "L", "L", "V", "V", "V"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, 
+      {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}, 
+      {"L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"}};
     
     public Seat(int seatId, int roomNumber) {
        this.seatId = seatId;
