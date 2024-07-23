@@ -1,6 +1,7 @@
 package utp.model;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Time {
 
@@ -13,6 +14,12 @@ public class Time {
 
         this.seatId = seatId;
         this.time = time;
+
+    }
+
+    public String getFormattedTime() {
+
+        return this.time.format(DateTimeFormatter.ofPattern("h:mm a"));
 
     }
 
