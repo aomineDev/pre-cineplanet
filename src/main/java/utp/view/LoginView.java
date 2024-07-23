@@ -1,9 +1,13 @@
 package utp.view;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Text;
 import utp.App;
 import utp.controller.LoginController;
 import utp.model.User;
@@ -12,37 +16,62 @@ public class LoginView {
     
     @FXML
     private TextField TFusername;
+    
+    @FXML
+    private Text tInvalidUser;
 
     @FXML
     private PasswordField PFpassword;
 
+    @FXML
+    private Text tInvalidPassword;
+
     //atributos
-    LoginController loginController;
+    private LoginController loginController;
 
     @FXML
-    void open(ActionEvent event) {
+    public void initialize(){
+        loginController= new LoginController();
+    }
 
-        loginController = new LoginController();
 
-        try {
-            
-            String username = TFusername.getText();
-            String password = PFpassword.getText();
+    @FXML
+    void open(ActionEvent event) throws IOException {
+        String username = TFusername.getText();
+        String password = PFpassword.getText();
+        
 
-            User user = loginController.verifyUsername(username);
-            Boolean verifyPassword = loginController.verifyPassword(user, password);
+        User user = loginController.verifyUsername(username);
 
-            if(verifyPassword) {
+        if (user == null) {
 
-                System.out.println("BIENVENIDO");
-                App.setRoot("movieView");
+            handleIncorrectCredentials();
+                
+        }else{
+            boolean isVerify = loginController.verifyPassword(user, password);
+        if (isVerify) {
 
-            }
+            App.setRoot("movieView");
+           
 
-        } catch (Exception e) {
+        }else{
+            handleIncorrectCredentials();
+        }       
 
-            System.out.println("CREDENCIALES INCORRECTAS");
-        }
+    }
+} 
+private void handleIncorrectCredentials(){
+    
+    tInvalidUser.setVisible(true);
+    tInvalidPassword.setVisible(true);   
+    TFusername.setText(null);
+    PFpassword.setText(null);
 
+} 
+
+@FXML
+    void HandleTyped(KeyEvent event) {
+        tInvalidPassword.setVisible(false);
+        tInvalidUser.setVisible(false);
     }
 }
