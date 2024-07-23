@@ -1,44 +1,39 @@
 package utp.controller;
 
-// import java.util.ArrayList;
+import java.util.ArrayList;
 
-// import utp.database.CineplanetDB;
-// import utp.model.User;
+import utp.database.CineplanetDB;
+import utp.model.User;
 
 public class LoginController {
 
-    // //llamada (Instancia unica)
-    // CineplanetDB cineplanetDB;
-    // ArrayList<User> userList;
+    //llamada (Instancia unica)
+    CineplanetDB cineplanetDB;
+    ArrayList<User> userList;
 
-    // //constructor vacio
-    // public LoginController () {
+    //constructor vacio
+    public LoginController () {
 
-    //     cineplanetDB = CineplanetDB.getInstance();
-    //     userList = cineplanetDB.getUserList();
+        cineplanetDB = CineplanetDB.getInstance();
+        userList = cineplanetDB.getUserList();
 
-    // }
+    }
 
-    // public User verifyUsername(String username) {
+    //verificacion del usurname
+    public User verifyUsername(String username) {
+        for (User user : userList) {
 
-    //     for (User user : userList) {
+            if (username.equals(user.getUsername())) {
+                return user;
+            }
+            
+        }
+        return null;
+    }
 
-    //         if (username.equals(user.getUsername())) {
-
-    //             return user;
-
-    //         }
-
-    //     }
-
-    //     return null;
-
-    // }
-
-    // public boolean verifyPassword(User user, String password) {
-        
-    //     return password.equals(user.getPassword());
-
-    // }
-    
+    //validacion del password del usuario encontrado
+    public boolean verifyPassword(User user, String password) {
+     
+        return password.equals(user.getPassword());
+    }
 }
