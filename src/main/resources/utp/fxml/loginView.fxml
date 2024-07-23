@@ -9,26 +9,30 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+<<<<<<< HEAD
 
 <HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.LoginView">
+=======
+<HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.LoginView">
+>>>>>>> fb734d9ff75d083f63ef45f77c68ef30cbda0796
    <children>
-      <ImageView fitHeight="333.0" fitWidth="508.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="451.0" fitWidth="508.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/cnplnet.jpg" />
+            <Image url="@../images/cover.jpg" />
          </image>
          <viewport>
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <VBox alignment="CENTER" disable="true" prefHeight="450.0" prefWidth="300.0" spacing="20.0">
+      <VBox alignment="CENTER" prefHeight="450.0" prefWidth="300.0" spacing="20.0">
          <children>
             <ImageView fitHeight="152.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../dassada.png" />
+                  <Image url="@../images/logo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="TFusername" prefHeight="25.0" prefWidth="264.0" scaleX="0.8" />
-            <PasswordField fx:id="PFpassword" scaleX="0.8" />
+            <TextField fx:id="TFusername" prefHeight="25.0" prefWidth="264.0" promptText="Username" scaleX="0.8" />
+            <PasswordField fx:id="PFpassword" promptText="Password" scaleX="0.8" />
             <Button mnemonicParsing="false" onAction="#open" text="Log in" wrapText="true" />
          </children>
       </VBox>

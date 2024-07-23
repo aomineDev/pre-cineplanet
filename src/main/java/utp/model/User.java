@@ -9,16 +9,16 @@ public class User {
     //metodo constructor 
 
     public User (String username, String password){
-        this.user = username;
-        this.pasword = password;
+        this.username = username;
+        this.password = password;
     }
 
     //metodo get
 
-    public String getUser(){
+    public String getUsername(){
         return this.username;
     }
-    public String getPasword(){
+    public String getPassword(){
         return this.password;
     }
 }
