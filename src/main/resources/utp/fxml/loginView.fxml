@@ -9,12 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<<<<<<< HEAD
-
-<HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.LoginView">
-=======
 <HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.LoginView">
->>>>>>> fb734d9ff75d083f63ef45f77c68ef30cbda0796
    <children>
       <ImageView fitHeight="451.0" fitWidth="508.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
