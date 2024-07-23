@@ -16,5 +16,10 @@ public class LoginView {
     @FXML
     void open(ActionEvent event) {
 
-}
+        String username = TFusername.getText();
+        String password = PFpassword.getText();
+
+        System.out.println(username + " " + password);
+
+    }
 }

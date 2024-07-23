@@ -5,6 +5,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Boucher {
+    
     private String clientName;
     private String title;
     private String format;
