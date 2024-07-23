@@ -1,5 +1,5 @@
 package utp.database;
 
-public class cineplanetDB {
+public class CineplanetDB {
   
 }
