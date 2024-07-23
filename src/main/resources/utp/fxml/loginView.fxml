@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.Login">
+<HBox prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.LoginView">
    <children>
       <ImageView fitHeight="333.0" fitWidth="508.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
