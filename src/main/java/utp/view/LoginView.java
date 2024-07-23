@@ -17,3 +17,4 @@ public class LoginView {
     void open(ActionEvent event) {
 
 }
+}
