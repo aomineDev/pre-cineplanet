@@ -15,6 +15,17 @@ public class Boucher {
     private double ticketPrice;
     private int roomNumber;
     
+    public Boucher(String clientName, String title, String format, LocalDate date, LocalTime time,
+            ArrayList<String> selectedSeat, double ticketPrice, int roomNumber) {
+        this.clientName = clientName;
+        this.title = title;
+        this.format = format;
+        this.date = date;
+        this.time = time;
+        this.selectedSeat = selectedSeat;
+        this.ticketPrice = ticketPrice;
+        this.roomNumber = roomNumber;
+    }
     public String getClientName() {
         return clientName;
     }
@@ -39,5 +50,6 @@ public class Boucher {
     public int getRoomNumber() {
         return roomNumber;
     }
+
     
 }
