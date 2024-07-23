@@ -1,6 +1,7 @@
 package utp.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Date {
@@ -14,6 +15,12 @@ public class Date {
 
         this.date = date;
         this.timeList = new ArrayList<>(timeList);
+
+    }
+
+    public String getFormattedDate() {
+
+        return this.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
     }
 

@@ -13,9 +13,9 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.MovieView">
    <children>
-      <Pane prefHeight="450.0" prefWidth="281.0">
+      <Pane>
          <children>
-            <ImageView fitHeight="450.0" fitWidth="281.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ivCover" fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <VBox spacing="12.0" HBox.hgrow="ALWAYS">
@@ -50,7 +50,7 @@
                               </Text>
                            </children>
                         </HBox>
-                        <Text fx:id="t" fill="#ff479f" strokeType="OUTSIDE" strokeWidth="0.0" text="S/.00.00">
+                        <Text fx:id="tTicket" fill="#ff479f" strokeType="OUTSIDE" strokeWidth="0.0" text="S/.00.00">
                            <font>
                               <Font name="System Bold" size="31.0" />
                            </font>
@@ -68,6 +68,7 @@
                   </Text>
                </children>
             </HBox>
+            <HBox fx:id="hbFormatBtnBox" prefHeight="0.0" prefWidth="480.0" />
             <HBox prefHeight="19.0" prefWidth="480.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:">
@@ -77,6 +78,7 @@
                   </Text>
                </children>
             </HBox>
+            <HBox fx:id="hbDateBtnBox" prefHeight="0.0" prefWidth="480.0" />
             <HBox prefHeight="19.0" prefWidth="480.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hora:">
@@ -86,7 +88,8 @@
                   </Text>
                </children>
             </HBox>
-            <HBox alignment="TOP_RIGHT" prefHeight="19.0" prefWidth="480.0">
+            <HBox fx:id="hbTimeBtnBox" prefHeight="0.0" prefWidth="480.0" />
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="86.0" prefWidth="480.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#handleContinueButton" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #4747ff;" text="Continuar" textFill="WHITE">
                      <font>

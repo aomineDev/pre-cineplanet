@@ -1,6 +1,8 @@
 package utp.model;
 
+import java.text.DecimalFormat;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Movie {
@@ -24,6 +26,25 @@ public class Movie {
         this.gender = gender;
         this.isInPremiere = isInPremiere;
         this.title = title;
+
+    }
+
+    //metodo de formateo ticket
+    public String getFormattedTicketPrice(double ticketPrice) {
+
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        return "s/. "+df.format(ticketPrice);
+
+    }
+
+    //metodo para formatear la duracion
+    public String getFormattedDuration() {
+
+        String pattern = "h'h' mm'min'";
+        DateTimeFormatter format = DateTimeFormatter.ofPattern(pattern);
+
+        return duration.format(format);
 
     }
 
