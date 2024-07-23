@@ -39,6 +39,5 @@ public class Boucher {
     public int getRoomNumber() {
         return roomNumber;
     }
-
     
 }
