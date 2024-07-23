@@ -3,22 +3,22 @@ package utp.model;
 public class User {
     
     // atributos 
-    private String user; 
-    private String pasword; 
+    private String username; 
+    private String password; 
 
     //metodo constructor 
 
-    public User (String user, String pasword){
-        this.user = user;
-        this.pasword = pasword;
+    public User (String username, String password){
+        this.user = username;
+        this.pasword = password;
     }
 
     //metodo get
 
     public String getUser(){
-        return this.user;
+        return this.username;
     }
     public String getPasword(){
-        return this.pasword;
+        return this.password;
     }
 }
