@@ -18,6 +18,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("seatView"));
+        scene.getStylesheets().add(getClass().getResource("css/styles.css").toString());
         stage.setTitle("Cineplanet");
         stage.setScene(scene);
         stage.show();
@@ -35,5 +36,6 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 
 }

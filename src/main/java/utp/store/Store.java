@@ -1,6 +1,7 @@
 package utp.store;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 import utp.model.Movie;
 import utp.model.Time;
@@ -14,9 +15,11 @@ public class Store {
     private LocalDate date;
     private double ticketPrice;
     private Time time;
+    private ArrayList <String> selectedSeats;
 
     private Store() {
 
+        selectedSeats= new ArrayList<>();
     }
 
     public Time getTime() {
@@ -57,6 +60,9 @@ public class Store {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+    public ArrayList<String> getSelectedSeats() {
+        return selectedSeats;
     }
 
     //patron de diseño singleton

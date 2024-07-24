@@ -3,7 +3,7 @@ package utp.model;
 public class Seat {
     private int seatId;
     private int roomNumber;
-    private String[][] seats = new String[][]{
+    private String[][] seatMatrix=  {
       {"V", "L", "L", "L", "L", "L", "V", "V", "V", "V", "V", "V", "L", "L", "L", "L", "V", "V", "V"}, 
       {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, 
       {"V", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "V", "V", "V"}, 
@@ -26,11 +26,11 @@ public class Seat {
        return this.roomNumber;
     }
  
-    public String[][] getSeats() {
-       return this.seats;
+    public String[][] getSeatMatrix() {
+       return this.seatMatrix;
     }
  
     public void updateSeatStatus(int row, int column) {
-       this.seats[row][column] = "O";
+       this.seatMatrix[row][column] = "O";
     }
 }

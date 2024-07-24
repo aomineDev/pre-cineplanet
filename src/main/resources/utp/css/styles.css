@@ -1,0 +1,31 @@
+.seat {
+    -fx-background-radius: 12;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-min-height: 24;
+    -fx-pref-height: 24;
+    -fx-pref-width: 24;
+  }
+  
+  .seat.seat-void {
+    -fx-background-color: transparent;
+  }
+  /*los que estan libre y esta puesto transparente y borde azul y mouse */
+  .seat.seat-empty {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: rgba(71, 71, 255, 0.75);
+    -fx-cursor: HAND;
+  }
+  /*mouse brillante*/
+  .seat.seat-empty:hover {
+    -fx-border-color: rgba(71, 71, 255, 1);
+  }
+  /*ocupado seat*/
+  .seat.seat-occupied {
+    -fx-background-color: #ff479f;
+  }
+  /*seleccionado un seat*/
+  .seat.seat-selected {
+    -fx-background-color: #4747ff;
+    -fx-cursor: HAND;
+  }

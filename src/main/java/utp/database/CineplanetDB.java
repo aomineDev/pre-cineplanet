@@ -91,5 +91,8 @@ public class CineplanetDB {
   public ArrayList<Movie> getMovieList(){
     return movieList;
   }
+  public ArrayList<Seat> getSeatList() {
+      return seatList;
+  }
 
 }
