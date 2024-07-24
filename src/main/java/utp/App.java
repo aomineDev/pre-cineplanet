@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("seatView"));
+        scene = new Scene(loadFXML("moviesView"));
         scene.getStylesheets().add(getClass().getResource("css/styles.css").toString());
         stage.setTitle("Cineplanet");
         stage.setScene(scene);

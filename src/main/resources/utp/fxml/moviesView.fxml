@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox prefHeight="450.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.MoviesView">
+   <children>
+      <HBox alignment="CENTER" minHeight="50.0" spacing="8.0" style="-fx-background-color: #4747ff;">
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-white.png" />
+               </image>
+            </ImageView>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Text fx:id="tUserName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <SVGPath content="M6.66645 2.52796C9.13319 0.879735 12.0333 0 15 0C18.9769 0.00453711 22.7895 1.58635 25.6016 4.39841C28.4137 7.21047 29.9955 11.0231 30 15C30 17.9667 29.1203 20.8668 27.472 23.3335C25.8238 25.8003 23.4811 27.7229 20.7403 28.8582C17.9994 29.9935 14.9834 30.2906 12.0736 29.7118C9.16394 29.133 6.49119 27.7044 4.3934 25.6066C2.29562 23.5088 0.867006 20.8361 0.288228 17.9263C-0.290551 15.0166 0.00649926 12.0006 1.14181 9.25975C2.27713 6.51886 4.19971 4.17618 6.66645 2.52796ZM21.9698 20.8293C22.9706 21.8166 23.5431 23.1578 23.5639 24.5636C25.5069 22.8287 26.8771 20.5445 27.493 18.0136C28.109 15.4826 27.9417 12.8243 27.0132 10.3906C26.0848 7.95683 24.4391 5.8625 22.2939 4.38489C20.1487 2.90728 17.6054 2.1161 15.0005 2.1161C12.3957 2.1161 9.85235 2.90728 7.70719 4.38489C5.56203 5.8625 3.91627 7.95683 2.98783 10.3906C2.0594 12.8243 1.89208 15.4826 2.50804 18.0136C3.124 20.5445 4.49418 22.8287 6.43715 24.5636C6.45795 23.158 7.03036 21.817 8.03092 20.8296C9.03149 19.8423 10.38 19.2878 11.7857 19.2857H18.2143C19.6202 19.2875 20.969 19.8419 21.9698 20.8293ZM12.2222 6.84265C13.0444 6.29325 14.0111 6 15 6C16.3261 6 17.5979 6.52678 18.5355 7.46447C19.4732 8.40215 20 9.67392 20 11C20 11.9889 19.7068 12.9556 19.1574 13.7779C18.6079 14.6001 17.8271 15.241 16.9134 15.6194C15.9998 15.9978 14.9945 16.0969 14.0246 15.9039C13.0546 15.711 12.1637 15.2348 11.4645 14.5355C10.7652 13.8363 10.289 12.9454 10.0961 11.9755C9.90315 11.0055 10.0022 10.0002 10.3806 9.08658C10.759 8.17295 11.3999 7.39206 12.2222 6.84265Z" fill="WHITE" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Peliculas">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="20.0" />
+         </VBox.margin>
+      </Text>
+      <FlowPane fx:id="fpMovies" hgap="33.0" rowValignment="TOP" vgap="10.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </FlowPane>
+   </children>
+</VBox>
