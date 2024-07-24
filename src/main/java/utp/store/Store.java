@@ -1,11 +1,11 @@
 package utp.store;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 import utp.model.Movie;
 import utp.model.Time;
 import utp.model.User;
+import utp.model.Seat;
 
 public class Store {
 
@@ -14,10 +14,10 @@ public class Store {
     private User user;
     private Movie movie;
     private String format;
-    private LocalDate date;
-    private double ticketPrice;
-    private int roomNumber;
+    private String date;
     private Time time;
+    private double ticketPrice;
+    private Seat seat;
     private ArrayList <String> selectedSeats;
 
     private Store() {
@@ -25,12 +25,12 @@ public class Store {
         selectedSeats= new ArrayList<>();
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
+    public Seat getSeat() {
+      return seat;
     }
 
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
+    public void setSeat(Seat seat) {
+      this.seat = seat;
     }
 
     public User getUser() {
@@ -73,11 +73,11 @@ public class Store {
         this.format = format;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
     public ArrayList<String> getSelectedSeats() {
@@ -95,5 +95,4 @@ public class Store {
         
         return instance;
     }
-  
 }

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.BoucherView">
+   <children>
+      <VBox fx:id="vbBoucher" alignment="CENTER" layoutX="90.0" layoutY="56.0" prefHeight="0.0" prefWidth="0.0" spacing="12.0">
+         <children>
+            <Text fx:id="tTitle" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #4747FF; -fx-font-size: 24; -fx-font-weight: 700;" text="Title" />
+            <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/qr.png" />
+               </image>
+            </ImageView>
+            <HBox fillHeight="false">
+               <children>
+                  <VBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <SVGPath content="M7 1V5M15 1V5M1 9H21M5 3H17C19.2091 3 21 4.79086 21 7V17C21 19.2091 19.2091 21 17 21H5C2.79086 21 1 19.2091 1 17V7C1 4.79086 2.79086 3 5 3Z" style="-fx-fill: transparent; -fx-stroke-width: 2; -fx-stroke: #4747FF;" />
+                        <Text fx:id="tDate" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="date" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <SVGPath content="M10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 0C11.3132 0 12.6136 0.258658 13.8268 0.761205C15.0401 1.26375 16.1425 2.00035 17.0711 2.92893C17.9997 3.85752 18.7362 4.95991 19.2388 6.17317C19.7413 7.38642 20 8.68678 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C4.47 20 0 15.5 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0ZM10.5 5V10.25L15 12.92L14.25 14.15L9 11V5H10.5Z" style="-fx-fill: #4747FF;" />
+                        <Text fx:id="tTime" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="time" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="8.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <SVGPath content="M3.5 13H5.5C6.03043 13 6.53914 13.2107 6.91421 13.5858C7.28929 13.9609 7.5 14.4696 7.5 15V17H8.5V15C8.5 14.4696 8.71071 13.9609 9.08579 13.5858C9.46086 13.2107 9.96957 13 10.5 13H12.5C13.0304 13 13.5391 13.2107 13.9142 13.5858C14.2893 13.9609 14.5 14.4696 14.5 15V17H15.5V15C15.5 14.4696 15.7107 13.9609 16.0858 13.5858C16.4609 13.2107 16.9696 13 17.5 13H19.5C20.0304 13 20.5391 13.2107 20.9142 13.5858C21.2893 13.9609 21.5 14.4696 21.5 15V17H22.5V20H0.5V17H1.5V15C1.5 14.4696 1.71071 13.9609 2.08579 13.5858C2.46086 13.2107 2.96957 13 3.5 13ZM3.5 0H19.5C20.0304 0 20.5391 0.210714 20.9142 0.585786C21.2893 0.960859 21.5 1.46957 21.5 2V11.54C20.8942 11.183 20.2032 10.9964 19.5 11V2H3.5V11C2.77 11 2.09 11.19 1.5 11.54V2C1.5 1.46957 1.71071 0.960859 2.08579 0.585786C2.46086 0.210714 2.96957 0 3.5 0Z" style="-fx-fill: #4747FF;" />
+                        <Text fx:id="tRoomNumber" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="room" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="4.0">
+               <children>
+                  <SVGPath content="M7.2 6.4C8.56 6.4 9.648 5.32 9.648 4C9.648 2.68 8.56 1.6 7.2 1.6C5.84 1.6 4.752 2.68 4.752 4C4.752 5.32 5.84 6.4 7.2 6.4ZM7.2 8C4.96 8 3.152 6.208 3.152 4C3.152 1.792 4.96 0 7.2 0C9.44 0 11.248 1.792 11.248 4C11.248 6.208 9.44 8 7.2 8ZM1.6 14.4H12.8V13.336C12.8 11.936 10.952 10.488 7.2 10.488C3.448 10.488 1.6 11.936 1.6 13.336V14.4ZM7.2 8.888C12.528 8.888 14.4 11.552 14.4 13.336V16H0V13.336C0 11.552 1.872 8.888 7.2 8.888Z" style="-fx-fill: #4747FF;" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #4747FF; -fx-font-size: 14; -fx-font-weight: 700;" text="Cliente:" />
+                  <Text fx:id="tClient" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="4.0">
+               <children>
+                  <SVGPath content="M15.1111 4.44444V2.66667C15.1111 1.2 13.9111 0 12.4444 0H5.33333C3.86667 0 2.66667 1.2 2.66667 2.66667V4.44444C1.2 4.44444 0 5.64444 0 7.11111V11.5556C0 13.0222 1.2 14.2222 2.66667 14.2222V16H4.44444V14.2222H13.3333V16H15.1111V14.2222C16.5778 14.2222 17.7778 13.0222 17.7778 11.5556V7.11111C17.7778 5.64444 16.5778 4.44444 15.1111 4.44444ZM4.44444 2.66667C4.44444 2.17778 4.84444 1.77778 5.33333 1.77778H12.4444C12.9333 1.77778 13.3333 2.17778 13.3333 2.66667V5.13778C12.7911 5.62667 12.4444 6.32889 12.4444 7.11111V8.88889H5.33333V7.11111C5.33333 6.32889 4.98667 5.62667 4.44444 5.13778V2.66667ZM16 11.5556C16 12.0444 15.6 12.4444 15.1111 12.4444H2.66667C2.17778 12.4444 1.77778 12.0444 1.77778 11.5556V7.11111C1.77778 6.62222 2.17778 6.22222 2.66667 6.22222C3.15556 6.22222 3.55556 6.62222 3.55556 7.11111V10.6667H14.2222V7.11111C14.2222 6.62222 14.6222 6.22222 15.1111 6.22222C15.6 6.22222 16 6.62222 16 7.11111V11.5556Z" style="-fx-fill: #4747FF;" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #4747FF; -fx-font-size: 14; -fx-font-weight: 700;" text="Butacas:" />
+                  <Text fx:id="tSelectedSeats" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="Butacas" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="4.0">
+               <children>
+                  <SVGPath content="M8.80357 5.37283L8.21392 4.78319M10.3757 6.94498L9.98251 6.55213M11.9479 8.51749L11.555 8.12428M13.7168 10.2861L13.1272 9.69643M12.9304 5.57141C12.6333 5.2742 12.4593 4.87578 12.4433 4.45584C12.4273 4.03589 12.5704 3.62538 12.844 3.30639C12.8666 3.27986 12.8783 3.24576 12.8769 3.21092C12.8754 3.17608 12.8609 3.14308 12.8361 3.11853L11.26 1.54067C11.234 1.51463 11.1986 1.5 11.1618 1.5C11.125 1.5 11.0896 1.51463 11.0636 1.54067L8.55143 4.05283C8.45872 4.14547 8.38889 4.25847 8.3475 4.38283C8.30623 4.50746 8.2365 4.62077 8.14382 4.71376C8.05114 4.80675 7.93806 4.87687 7.81356 4.91854C7.68913 4.96001 7.57604 5.02982 7.48321 5.12247L1.04067 11.5636C1.01463 11.5896 1 11.625 1 11.6618C1 11.6986 1.01463 11.734 1.04067 11.76L2.61675 13.3361C2.6413 13.3609 2.6743 13.3754 2.70914 13.3769C2.74398 13.3783 2.77808 13.3666 2.80461 13.344C3.12353 13.0701 3.53413 12.9267 3.95422 12.9427C4.37431 12.9586 4.77288 13.1326 5.07014 13.4299C5.3674 13.7271 5.54141 14.1257 5.55734 14.5458C5.57327 14.9659 5.42994 15.3765 5.15605 15.6954C5.13342 15.7219 5.12166 15.756 5.12311 15.7909C5.12457 15.8257 5.13914 15.8587 5.16391 15.8833L6.73999 17.4593C6.76604 17.4854 6.80137 17.5 6.8382 17.5C6.87504 17.5 6.91036 17.4854 6.93642 17.4593L13.3793 11.0168C13.472 10.924 13.5418 10.8109 13.5832 10.6864C13.6245 10.5618 13.6942 10.4485 13.7869 10.3555C13.8796 10.2625 13.9927 10.1924 14.1172 10.1507C14.2415 10.1093 14.3545 10.0395 14.4472 9.94679L16.9593 7.43463C16.9854 7.40858 17 7.37325 17 7.33642C17 7.29958 16.9854 7.26425 16.9593 7.2382L15.3833 5.66212C15.3587 5.63736 15.3257 5.62278 15.2909 5.62133C15.256 5.61987 15.2219 5.63163 15.1954 5.65426C14.8768 5.92833 14.4666 6.07205 14.0466 6.05668C13.6267 6.04132 13.228 5.86801 12.9304 5.57141Z" style="-fx-fill: transparent; -fx-stroke: #4747FF; -fx-stroke-width: 1.5;" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #4747FF; -fx-font-size: 14; -fx-font-weight: 700;" text="Entradas:" />
+               </children>
+            </HBox>
+            <HBox spacing="100.0">
+               <children>
+                  <Text fx:id="tFormat" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="Text" HBox.hgrow="ALWAYS" />
+                  <Text fx:id="tQuantity" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="Text" />
+                  <Text fx:id="tTicketPrice" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="Text" />
+               </children>
+            </HBox>
+            <Separator />
+            <VBox alignment="CENTER_RIGHT">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: FF479F; -fx-font-size: 16; -fx-font-weight: 700;" text="Total" />
+                  <Text fx:id="tTotalPrice" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: FF479F; -fx-font-size: 20; -fx-font-weight: 700;" text="total price" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleGoBackBtnClick" style="-fx-pref-width: 36; -fx-pref-height: 36; -fx-border-color: #4747FF; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-color: transparent;" visible="false">
+         <graphic>
+            <SVGPath content="M9.19719 1.24718L8.40442 0.454413C8.06874 0.118737 7.52594 0.118737 7.19384 0.454413L0.251758 7.39293C-0.0839192 7.7286 -0.0839192 8.2714 0.251758 8.6035L7.19384 15.5456C7.52952 15.8813 8.07231 15.8813 8.40442 15.5456L9.19719 14.7528C9.53644 14.4136 9.52929 13.8601 9.1829 13.528L4.87981 9.42841H15.143C15.6179 9.42841 16 9.04631 16 8.57137V7.42864C16 6.95369 15.6179 6.57159 15.143 6.57159H4.87981L9.1829 2.47205C9.53286 2.13994 9.54001 1.58643 9.19719 1.24718Z" style="-fx-fill: #4747FF;" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <VBox alignment="CENTER" fillWidth="false" layoutX="553.0" layoutY="86.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #262626;" text="Gracias por su compra!" />
+            <TextField fx:id="tfClient" onKeyTyped="#handleClientTyped" promptText="Cliente" style="-fx-pref-width: 200; -fx-pref-height: 32; -fx-background-color: transparent; -fx-border-radius: 8; -fx-border-width: 1.2; -fx-border-color: #4747ff;" styleClass="text--field">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#handleFinishClick" style="-fx-background-color: #4747FF; -fx-pref-width: 200; -fx-pref-height: 32; -fx-text-fill: white; -fx-font-weight: 700; -fx-background-radius: 8;" text="Finalizar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow offsetY="4.0">
+                     <color>
+                        <Color red="0.2800000011920929" green="0.2800000011920929" blue="1.0" opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

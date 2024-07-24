@@ -9,13 +9,13 @@ public class Boucher {
     private String clientName;
     private String title;
     private String format;
-    private LocalDate date;
-    private LocalTime time;
+    private String date;
+    private String time;
     private ArrayList<String> selectedSeat;
     private double ticketPrice;
     private int roomNumber;
     
-    public Boucher(String clientName, String title, String format, LocalDate date, LocalTime time,
+    public Boucher(String clientName, String title, String format, String date, String time,
             ArrayList<String> selectedSeat, double ticketPrice, int roomNumber) {
         this.clientName = clientName;
         this.title = title;
@@ -35,10 +35,10 @@ public class Boucher {
     public String getFormat() {
         return format;
     }
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
     public ArrayList<String> getSelectedSeat() {

@@ -10,18 +10,19 @@ import utp.model.Movie;
 import utp.model.Seat;
 import utp.model.Time;
 import utp.model.User;
+import utp.model.Boucher;
 
 public class CineplanetDB {
 
   //atributos
   private static CineplanetDB instance;
   private ArrayList<User> userList;
-  private ArrayList <Movie> movieList;
-  
-  private ArrayList <Date> dateList; //Lista de fecha
-  private ArrayList <Time> timeList; //Lista de horario
-  private ArrayList <Format> formatList; //Lista de formato
-  private ArrayList <Seat> seatList; // Lista de butacas
+  private ArrayList<Movie> movieList;
+  private ArrayList<Date> dateList; //Lista de fecha
+  private ArrayList<Time> timeList; //Lista de horario
+  private ArrayList<Format> formatList; //Lista de formato
+  private ArrayList<Seat> seatList; // Lista de butacas
+  private ArrayList<Boucher> boucherList; // Lista de boucher 
 
   //metodo construtor 
   private CineplanetDB () {
@@ -42,6 +43,7 @@ public class CineplanetDB {
     timeList = new ArrayList<>();
     formatList = new ArrayList<>();
     seatList = new ArrayList<>();
+    boucherList = new ArrayList<>();
 
     // Horario 1
     timeList.add(new Time(LocalTime.of(18, 30), 1));
@@ -93,6 +95,10 @@ public class CineplanetDB {
   }
   public ArrayList<Seat> getSeatList() {
       return seatList;
+  }
+
+  public ArrayList<Boucher> getBoucherList() {
+    return boucherList;
   }
 
 }

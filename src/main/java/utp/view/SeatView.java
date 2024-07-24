@@ -1,10 +1,13 @@
 package utp.view;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
+import utp.App;
 import utp.controller.SeatController;
 import utp.model.Seat;
 
@@ -26,8 +29,9 @@ public class SeatView {
 
         seatController = new SeatController();
         seat = seatController.getSeat();
-        String [][] seatMatrix =seat.getSeatMatrix();
-        tRoomNumber.setText("Sala N° "+seat.getRoomNumber());
+        String [][] seatMatrix = seat.getSeatMatrix();
+        tRoomNumber.setText("Sala N° " + seat.getRoomNumber());
+        seatController.setStoreSeat(seat);
 
         for ( int i=0; i<seatMatrix.length; i++){
             for ( int j=0; j<seatMatrix[i].length; j++){
@@ -45,7 +49,6 @@ public class SeatView {
                     handleSeatClick(event);
 
                     });
-                    // System.out.print(" - " + SeatController.getPosicionButaca(i, j)  );
  
                  }
              else if (seatMatrix[i][j] .equals("O")){
@@ -59,7 +62,6 @@ public class SeatView {
     public void handleSeatClick(ActionEvent event){
     Button button =(Button) event.getSource();
     String seatPoss= (String) button.getUserData();
-    System.out.println(seatPoss);
     
     if(button.getStyleClass().contains("seat-empty")){
        button.getStyleClass().remove("seat-empty");
@@ -74,8 +76,8 @@ public class SeatView {
     tSelectedSeats.setText(seatController.getSelectedSeatsToString());
 }
     @FXML
-    public void handleContineClick(ActionEvent event){
-        System.out.println("Hello");  
+    public void handleContineClick(ActionEvent event) throws IOException{
+        App.setRoot("boucherView");
     }
 
 

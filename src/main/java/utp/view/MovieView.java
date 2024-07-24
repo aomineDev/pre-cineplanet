@@ -58,9 +58,6 @@ public class MovieView {
         Image image = new Image(getClass().getResource("/utp/images/movies/3x-" + movie.getCover()).toExternalForm());
         ivCover.setImage(image);
 
-
-        System.out.println(movie.getCover());
-
         //parte visual elementos
         tTitle.setText(movie.getTitle() + " - " + movie.getCategory());
         tGenero.setText(movie.getGender());
@@ -89,7 +86,7 @@ public class MovieView {
     /* ---------------------------- METODOS QUE CREAN LOS BOTONES -------------------------- */
 
     //mostrar los formatos por pantalla
-    public void renderFormatBtnList(ArrayList<Format> formatList) {
+    void renderFormatBtnList(ArrayList<Format> formatList) {
 
         for (Format format : formatList) {
 
@@ -115,7 +112,7 @@ public class MovieView {
     }
 
     //mostrar las fechas por pantalla
-    public void renderDateBtnList(ArrayList<Date> dateList) {
+    void renderDateBtnList(ArrayList<Date> dateList) {
 
         //limpia el contenedor
         hbDateBtnBox.getChildren().clear();
@@ -137,11 +134,11 @@ public class MovieView {
 
         addActiveClass(hbDateBtnBox);
 
-        movieController.setDate(dateList.get(0).getDate());
+        movieController.setDate(dateList.get(0).getFormattedDate());
 
     }
 
-    public void renderTimeBtnList(ArrayList<Time> timeList) {
+    void renderTimeBtnList(ArrayList<Time> timeList) {
 
         //limpia el contendor
         hbTimeBtnBox.getChildren().clear();
@@ -171,7 +168,7 @@ public class MovieView {
     /* ---------------------------- METODOS QUE SE EJECUTAN AL HACER CLICK -------------------------- */
 
     //guardar el formato en el store
-    public void handleFormatClick(ActionEvent event) {
+    void handleFormatClick(ActionEvent event) {
 
         Button button = (Button) event.getSource();
         Format format = (Format) button.getUserData();
@@ -193,7 +190,7 @@ public class MovieView {
 
     }
 
-    public void handleDateClick(ActionEvent event) {
+    void handleDateClick(ActionEvent event) {
 
         Button button = (Button) event.getSource();
         Date date = (Date) button.getUserData();
@@ -206,11 +203,11 @@ public class MovieView {
         renderTimeBtnList(timeList);
 
         //enviando fecha al controlador
-        movieController.setDate(date.getDate());
+        movieController.setDate(date.getFormattedDate());
 
     }
 
-    public void handleTimeClick(ActionEvent event) {
+    void handleTimeClick(ActionEvent event) {
 
         Button button = (Button) event.getSource();
         Time time = (Time) button.getUserData();
@@ -222,7 +219,7 @@ public class MovieView {
 
     }
 
-    public void deleteActiveClass(HBox hbox) {
+    void deleteActiveClass(HBox hbox) {
 
         hbox.getChildren().forEach(button -> {
             button.getStyleClass().remove("active");
@@ -230,7 +227,7 @@ public class MovieView {
 
     }
 
-    public void addActiveClass(HBox hbox) {
+    void addActiveClass(HBox hbox) {
 
         hbox.getChildren().get(0).getStyleClass().add("active");
 

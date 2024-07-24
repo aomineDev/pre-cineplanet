@@ -33,7 +33,7 @@ public class MovieController {
     }
 
     //metodo para enviar la fecha al store
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
 
         store.setDate(date);
 

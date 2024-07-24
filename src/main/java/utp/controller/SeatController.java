@@ -35,6 +35,10 @@ public class SeatController {
         return null;
     }
 
+    public void setStoreSeat(Seat seat) {
+        store.setSeat(seat);
+    }
+
     public String getSeatPoss(int row, int column){ 
         
         String rowStr="";
