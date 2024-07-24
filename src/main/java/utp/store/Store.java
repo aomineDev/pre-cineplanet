@@ -5,21 +5,40 @@ import java.util.ArrayList;
 
 import utp.model.Movie;
 import utp.model.Time;
+import utp.model.User;
 
 public class Store {
 
     //instancia unica
     private static Store instance;
+    private User user;
     private Movie movie;
     private String format;
     private LocalDate date;
     private double ticketPrice;
+    private int roomNumber;
     private Time time;
     private ArrayList <String> selectedSeats;
 
     private Store() {
 
         selectedSeats= new ArrayList<>();
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Time getTime() {

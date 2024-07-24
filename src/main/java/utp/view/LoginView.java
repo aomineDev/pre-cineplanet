@@ -51,7 +51,8 @@ public class LoginView {
             boolean isVerify = loginController.verifyPassword(user, password);
         if (isVerify) {
 
-            App.setRoot("movieView");
+            loginController.setStoreUser(user);
+            App.setRoot("moviesView");
            
 
         }else{

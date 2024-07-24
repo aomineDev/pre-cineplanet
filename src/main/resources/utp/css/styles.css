@@ -29,3 +29,32 @@
     -fx-background-color: #4747ff;
     -fx-cursor: HAND;
   }
+
+  /*estilos del movie detaills*/
+  .btn-format {
+    -fx-pref-width: 34;
+    -fx-pref-height: 34;
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(38, 38, 38, 0.5);
+    -fx-border-radius: 16;
+    -fx-text-fill: rgba(38, 38, 38, 0.5);
+    -fx-cursor: HAND;
+  }
+  .btn-format.active {
+    -fx-border-width: 1.2;
+    -fx-border-color: #4747ff;
+    -fx-text-fill: #4747FF;
+  }
+  .btn-date-time {
+    -fx-pref-height: 28;
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(38, 38, 38, 0.5);
+    -fx-border-radius: 8;
+    -fx-text-fill: rgba(38, 38, 38, 0.5);
+    -fx-cursor: HAND;
+  }
+  .btn-date-time.active {
+    -fx-border-width: 1.2;
+    -fx-border-color: #4747FF;
+    -fx-text-fill: #4747FF;
+  }

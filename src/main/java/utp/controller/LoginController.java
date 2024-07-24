@@ -4,18 +4,21 @@ import java.util.ArrayList;
 
 import utp.database.CineplanetDB;
 import utp.model.User;
+import utp.store.Store;
 
 public class LoginController {
 
     //llamada (Instancia unica)
-    CineplanetDB cineplanetDB;
-    ArrayList<User> userList;
+    private CineplanetDB cineplanetDB;
+    private ArrayList<User> userList;
+    private Store store;
 
     //constructor vacio
     public LoginController () {
 
         cineplanetDB = CineplanetDB.getInstance();
         userList = cineplanetDB.getUserList();
+        store = Store.getInstance();
 
     }
 
@@ -35,5 +38,11 @@ public class LoginController {
     public boolean verifyPassword(User user, String password) {
      
         return password.equals(user.getPassword());
+    }
+
+    public void setStoreUser(User user) {
+
+        store.setUser(user);
+
     }
 }

@@ -14,91 +14,97 @@ public class SeatController {
     
 
     //constructor vacio 
-public SeatController(){
+    public SeatController(){
 
-    seatList = CineplanetDB.getInstance().getSeatList();
-    store = Store.getInstance();
-    selectedSeats= store.getSelectedSeats();
+        seatList = CineplanetDB.getInstance().getSeatList();
+        store = Store.getInstance();
+        selectedSeats= store.getSelectedSeats();
 
-}
-public Seat getSeat(){
-    int id=1; //store.getTime().getSeatId()
-    for (Seat st : seatList){
-        if( id == st.getSeatId()){
-            return st;
-        }
     }
-    return null;
-}
-public String getSeatPoss(int row, int column){ 
-       
-    String rowStr="";
 
-    if (row == 0){
+    public Seat getSeat(){
 
-        rowStr= "A";
+        int id = store.getTime().getSeatId();
 
-    }else if (row == 1){
-
-        rowStr= "B";
-
-    }else if (row == 2){
-
-        rowStr= "C";
-
-    }else if (row == 3){
-
-        rowStr= "D";
-
-    }else if (row == 4){
-
-        rowStr= "E";
-
-    }else if (row == 5){
-
-        rowStr= "F";
+        for (Seat st : seatList){
+            if( id == st.getSeatId()){
+                return st;
+            }
+        }
         
-    }else if (row == 6){
+        return null;
+    }
 
-        rowStr= "G";
+    public String getSeatPoss(int row, int column){ 
+        
+        String rowStr="";
 
-    }else if (row == 7){
+        if (row == 0){
 
-         rowStr= "H";
+            rowStr= "A";
 
-    } 
- return rowStr+(column+1);
+        }else if (row == 1){
 
-}
-public ArrayList<String> getSelectedSeats() {
+            rowStr= "B";
 
-    return selectedSeats;
+        }else if (row == 2){
 
-}
+            rowStr= "C";
 
-//añadir seleccion de butacas
-public void addSelectedSeats(String seatPoss) {
+        }else if (row == 3){
 
-    selectedSeats.add(seatPoss);
+            rowStr= "D";
 
-}
+        }else if (row == 4){
 
-public void deleteSelectedSeats(String seatPoss) {
+            rowStr= "E";
 
-    int index = selectedSeats.indexOf(seatPoss);
+        }else if (row == 5){
 
-    selectedSeats.remove(index);
+            rowStr= "F";
+            
+        }else if (row == 6){
 
-}
+            rowStr= "G";
 
-public String getSelectedSeatsToString() {
+        }else if (row == 7){
 
-    String str = selectedSeats.toString();
+            rowStr= "H";
 
-    //return str.substring(1, str.length()-1);
+        } 
+    return rowStr+(column+1);
 
-    return str.replace("[", "").replace("]", "");
-}
+    }
+
+    public ArrayList<String> getSelectedSeats() {
+
+        return selectedSeats;
+
+    }
+
+    //añadir seleccion de butacas
+    public void addSelectedSeats(String seatPoss) {
+
+        selectedSeats.add(seatPoss);
+
+    }
+
+    public void deleteSelectedSeats(String seatPoss) {
+
+        int index = selectedSeats.indexOf(seatPoss);
+
+        selectedSeats.remove(index);
+
+    }
+
+    public String getSelectedSeatsToString() {
+
+        String str = selectedSeats.toString();
+
+        //return str.substring(1, str.length()-1);
+
+        return str.replace("[", "").replace("]", "");
+    }
 
 }
 

@@ -11,28 +11,15 @@ import utp.store.Store;
 public class MovieController {
 
     private Store store;
-    private CineplanetDB cineplanetDB;
-    private ArrayList<Movie> movieList;
 
     public MovieController() {
 
         store = Store.getInstance();
-        cineplanetDB = CineplanetDB.getInstance();
-        movieList = cineplanetDB.getMovieList();
-
-    }
-
-    //es prueba
-    public void SelecMovie() {
-
-        store.setMovie(movieList.get(1));
 
     }
 
     //trae la pelicula que se selecciono
     public Movie getStoreMovie() {
-
-        SelecMovie();
 
         return store.getMovie();
 
