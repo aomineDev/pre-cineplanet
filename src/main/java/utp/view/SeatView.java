@@ -35,6 +35,7 @@ public class SeatView {
                 Button button =new Button();
                 button.getStyleClass().add("seat");
                 fpSeatContainer.getChildren().add(button);
+                
                 if (seatMatrix[i][j] .equals("V")){
                     button.getStyleClass().add("seat-void");
                  }else if (seatMatrix[i][j] .equals("L")){

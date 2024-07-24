@@ -10,14 +10,14 @@ import java.io.IOException;
 
 /**
  * JavaFX App
- */
+*/
 public class App extends Application {
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("moviesView"));
+        scene = new Scene(loadFXML("seatView"));
         scene.getStylesheets().add(getClass().getResource("css/styles.css").toString());
         stage.setTitle("Cineplanet");
         stage.setScene(scene);

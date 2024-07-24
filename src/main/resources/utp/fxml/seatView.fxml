@@ -16,7 +16,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.SeatView">
    <children>
       <Text fx:id="tRoomNumber" fill="#4747ff" strokeType="OUTSIDE" strokeWidth="0.0" text="N° de Sala ">
@@ -85,7 +84,7 @@
             </GridPane>
             <VBox alignment="CENTER" fillWidth="false" spacing="8.0">
                <children>
-                  <FlowPane fx:id="fpSeatContainer" hgap="10.0" maxHeight="248.0" maxWidth="600.0" minHeight="248.0" minWidth="600.0" prefHeight="248.0" prefWidth="600.0" vgap="10.0" />
+                  <FlowPane fx:id="fpSeatContainer" hgap="8.0" maxHeight="248.0" maxWidth="600.0" minHeight="248.0" minWidth="600.0" prefHeight="248.0" prefWidth="600.0" vgap="8.0" />
                   <GridPane alignment="CENTER" hgap="8.0">
                     <columnConstraints>
                       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="24.0" prefWidth="24.0" />
