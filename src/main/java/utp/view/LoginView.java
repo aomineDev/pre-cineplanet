@@ -36,7 +36,7 @@ public class LoginView {
 
 
     @FXML
-    void open(ActionEvent event) throws IOException {
+    void handleLoginClick(ActionEvent event) throws IOException {
         String username = TFusername.getText();
         String password = PFpassword.getText();
         
