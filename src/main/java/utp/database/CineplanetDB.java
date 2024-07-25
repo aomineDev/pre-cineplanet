@@ -46,18 +46,31 @@ public class CineplanetDB {
     boucherList = new ArrayList<>();
 
     // Horario 1
-    timeList.add(new Time(LocalTime.of(18, 00), 1));
-    seatList.add(new Seat(1, 1));
+    timeList.add(new Time(LocalTime.of(15, 00), 1));
+    seatList.add(new Seat(1, 2));
 
-    timeList.add(new Time(LocalTime.of(15, 00), 2));
-    seatList.add(new Seat(2, 2));
+    timeList.add(new Time(LocalTime.of(18, 00), 2));
+    seatList.add(new Seat(2, 1));
 
     timeList.add(new Time(LocalTime.of(21, 00), 3));
     seatList.add(new Seat(3, 3));
 
     //Fecha 1
     dateList.add(new Date(LocalDate.of(2024, 05, 17), timeList));
+
+    timeList.clear();
+    timeList.add(new Time(LocalTime.of(15, 00), 3));
+    seatList.add(new Seat(3, 2));
+
+    timeList.add(new Time(LocalTime.of(18, 00), 4));
+    seatList.add(new Seat(4, 5));
+
     dateList.add(new Date(LocalDate.of(2024, 05, 18), timeList));
+    
+    timeList.clear();
+    timeList.add(new Time(LocalTime.of(18, 00), 5));
+    seatList.add(new Seat(5, 4));
+
     dateList.add(new Date(LocalDate.of(2024, 05, 20), timeList));
 
     //formato1
@@ -67,10 +80,10 @@ public class CineplanetDB {
 
     //Horario 2
     timeList.clear();
-    timeList.add(new Time(LocalTime.of(17, 30), 4));
-    seatList.add(new Seat(4, 2));
-    timeList.add(new Time(LocalTime.of(20, 30), 5));
-    seatList.add(new Seat(5, 8));
+    timeList.add(new Time(LocalTime.of(17, 30), 6));
+    seatList.add(new Seat(6, 2));
+    timeList.add(new Time(LocalTime.of(20, 30), 7));
+    seatList.add(new Seat(7, 8));
     //fecha 2
     dateList.clear();
     dateList.add(new Date(LocalDate.of(2024, 07, 27), timeList));
