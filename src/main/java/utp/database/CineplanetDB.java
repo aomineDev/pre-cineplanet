@@ -75,10 +75,12 @@ public class CineplanetDB {
     movieList.add(new Movie("Madame Web", "madam-web.png", "Accion", "B", false, LocalTime.of(1, 56), formatList));
     movieList.add(new Movie("John Wick: Sin control ", "john-wick.png", "Accion", "C", false, LocalTime.of(1, 41) ,formatList));
     movieList.add(new Movie("El Planeta De Los Simios: Nuevo Reino", "kingdom-of-the planet-of-the-apes.png", "Accion", "B", false, LocalTime.of(2, 25) ,formatList));
+    movieList.add(new Movie("El cover", "cover.png", "Musical", "A", false, LocalTime.of(1, 23) ,formatList));
     movieList.add(new Movie("Role-play", "role-play.png", "Accion", "R", false, LocalTime.of(1, 40), formatList));
     movieList.add(new Movie("Orion-and-the-Dark", "orion-and-the-dark.png", "Animacion", "TV-Y7", false, LocalTime.of(1, 33), formatList));
     movieList.add(new Movie("Spiderman", "spiderman.png", "Accion", "A", false, LocalTime.of(2, 28), formatList));
     movieList.add(new Movie("Fright Night", "fright-night.png", "Terror", "B", false, LocalTime.of(1, 46), formatList));    
+
   }
   
   //patron de diseño singleton
