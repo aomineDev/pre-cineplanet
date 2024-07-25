@@ -68,20 +68,6 @@ public class CineplanetDB {
 
     //formato 2
     formatList.add(new Format("3D",  17.00, dateList));
-
-    //------------------------------------------------------------------------//
-    //horario 3
-
-    timeList.clear();
-    timeList.add(new Time(LocalTime.of(16, 45), 3));
-    seatList.add(new Seat(3, 3));
-
-    //fecha 3
-    dateList.clear();
-    dateList.add(new Date(LocalDate.of(2023, 01, 12), timeList));
-
-    //formato 3
-    formatList.add(new Format("2D", 17.00, dateList));
     
     // llenando lista de peliculas
     movieList.add(new Movie("Amigos Imaginarios", "amigos-imaginarios.png", "Animacion", "A", false, LocalTime.of(1, 44),formatList));
@@ -89,7 +75,7 @@ public class CineplanetDB {
     movieList.add(new Movie("Madame Web", "madam-web.png", "Accion", "B", false, LocalTime.of(1, 56), formatList));
     movieList.add(new Movie("John Wick: Sin control ", "john-wick.png", "Accion", "C", false, LocalTime.of(1, 41) ,formatList));
     movieList.add(new Movie("El Planeta De Los Simios: Nuevo Reino", "kingdom-of-the planet-of-the-apes.png", "Accion", "B", false, LocalTime.of(2, 25) ,formatList));
-
+    movieList.add(new Movie("Role-play", "role-play.png", "Accion", "R", false, LocalTime.of(1, 40), formatList));
   }
   
   //patron de diseño singleton
