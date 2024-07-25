@@ -89,6 +89,7 @@ public class CineplanetDB {
     movieList.add(new Movie("Madame Web", "madam-web.png", "Accion", "B", false, LocalTime.of(1, 56), formatList));
     movieList.add(new Movie("John Wick: Sin control ", "john-wick.png", "Accion", "C", false, LocalTime.of(1, 41) ,formatList));
     movieList.add(new Movie("El Planeta De Los Simios: Nuevo Reino", "kingdom-of-the planet-of-the-apes.png", "Accion", "B", false, LocalTime.of(2, 25) ,formatList));
+    movieList.add(new Movie("El cover", "cover.png", "Musical", "A", false, LocalTime.of(1, 23) ,formatList));
 
   }
   
