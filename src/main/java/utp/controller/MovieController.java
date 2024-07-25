@@ -1,9 +1,5 @@
 package utp.controller;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-
-import utp.database.CineplanetDB;
 import utp.model.Movie;
 import utp.model.Time;
 import utp.store.Store;
