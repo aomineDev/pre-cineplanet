@@ -40,7 +40,7 @@
             <Insets left="20.0" />
          </VBox.margin>
       </Text>
-      <FlowPane fx:id="fpMovies" hgap="33.0" rowValignment="TOP" vgap="10.0">
+      <FlowPane fx:id="fpMovies" hgap="30.0" rowValignment="TOP" vgap="30.0">
          <VBox.margin>
             <Insets />
          </VBox.margin>
