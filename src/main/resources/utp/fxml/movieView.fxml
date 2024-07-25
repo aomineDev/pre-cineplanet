@@ -14,7 +14,7 @@
 
 <HBox fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.MovieView">
    <children>
-      <ImageView fx:id="ivCover" fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ivCover" fitHeight="455.0" fitWidth="300.0" pickOnBounds="true" />
       <VBox spacing="12.0">
          <children>
             <HBox spacing="30.0">
