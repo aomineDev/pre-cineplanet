@@ -46,11 +46,14 @@ public class CineplanetDB {
     boucherList = new ArrayList<>();
 
     // Horario 1
-    timeList.add(new Time(LocalTime.of(18, 30), 1));
+    timeList.add(new Time(LocalTime.of(18, 00), 1));
     seatList.add(new Seat(1, 1));
 
     timeList.add(new Time(LocalTime.of(15, 00), 2));
-    seatList.add(new Seat(2, 1));
+    seatList.add(new Seat(2, 2));
+
+    timeList.add(new Time(LocalTime.of(21, 00), 3));
+    seatList.add(new Seat(3, 3));
 
     //Fecha 1
     dateList.add(new Date(LocalDate.of(2024, 05, 17), timeList));
@@ -64,12 +67,14 @@ public class CineplanetDB {
 
     //Horario 2
     timeList.clear();
-    timeList.add(new Time(LocalTime.of(14, 40), 2));
-    seatList.add(new Seat(2, 2));
-
+    timeList.add(new Time(LocalTime.of(17, 30), 4));
+    seatList.add(new Seat(4, 2));
+    timeList.add(new Time(LocalTime.of(20, 30), 5));
+    seatList.add(new Seat(5, 8));
     //fecha 2
     dateList.clear();
     dateList.add(new Date(LocalDate.of(2024, 07, 27), timeList));
+    dateList.add(new Date(LocalDate.of(2024, 07, 30), timeList));
 
     //formato 2
     formatList.add(new Format("3D",  17.00, dateList));
