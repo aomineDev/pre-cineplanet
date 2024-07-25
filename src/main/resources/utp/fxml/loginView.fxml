@@ -33,7 +33,7 @@
             </ImageView>
             <VBox alignment="BOTTOM_LEFT">
                <children>
-                  <TextField fx:id="TFusername" onKeyTyped="#HandleTyped" prefHeight="32.0" prefWidth="200.0" promptText="Usuario" style="-fx-border-color: #4747ff; -fx-border-radius: 8;" />
+                  <TextField fx:id="TFusername" onKeyTyped="#HandleTyped" prefHeight="32.0" prefWidth="200.0" promptText="Usuario" style="-fx-border-color: #4747ff; -fx-border-radius: 8; -fx-background-color: white; -fx-border-width: 1.2;" />
                   <Text fx:id="tInvalidUser" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario incorrecto." visible="false">
                      <font>
                         <Font size="10.0" />
@@ -43,7 +43,7 @@
             </VBox>
             <VBox>
                <children>
-                  <PasswordField fx:id="PFpassword" onKeyTyped="#HandleTyped" prefHeight="32.0" prefWidth="200.0" promptText="Contraseña" style="-fx-border-color: #4747ff; -fx-border-radius: 8;" />
+                  <PasswordField fx:id="PFpassword" onKeyTyped="#HandleTyped" prefHeight="32.0" prefWidth="200.0" promptText="Contraseña" style="-fx-border-color: #4747ff; -fx-border-radius: 8; -fx-background-color: white; -fx-border-width: 1.2;" />
                   <Text fx:id="tInvalidPassword" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña incorrecta." visible="false">
                      <font>
                         <Font size="10.0" />
