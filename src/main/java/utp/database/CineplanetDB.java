@@ -85,6 +85,8 @@ public class CineplanetDB {
     movieList.add(new Movie("Orion-and-the-Dark", "orion-and-the-dark.png", "Animacion", "TV-Y7", false, LocalTime.of(1, 33), formatList));
     movieList.add(new Movie("Spiderman", "spiderman.png", "Accion", "A", false, LocalTime.of(2, 28), formatList));
     movieList.add(new Movie("Fright Night", "fright-night.png", "Terror", "B", false, LocalTime.of(1, 46), formatList));    
+    movieList.add(new Movie("Venom", "venom-3.png", "Accion", "B", false, LocalTime.of(2, 15), formatList));    
+    movieList.add(new Movie("Joker", "  ", "Crimen", "B", false, LocalTime.of(2, 2), formatList));    
 
   }
   
