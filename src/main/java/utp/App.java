@@ -19,7 +19,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("loginView"));
-        scene.getStylesheets().add(getClass().getResource("css/styles.css").toString());
+        scene.getStylesheets().add(getClass().getResource("css/styles.css").toExternalForm());
         stage.setTitle("Cineplanet");
         stage.setScene(scene);
         stage.show();

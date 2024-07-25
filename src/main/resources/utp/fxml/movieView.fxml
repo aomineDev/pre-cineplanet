@@ -12,79 +12,70 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox fillHeight="false" maxHeight="450.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.MovieView">
+<HBox fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utp.view.MovieView">
    <children>
-      <ImageView fx:id="ivCover" fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" />
-      <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+      <ImageView fx:id="ivCover" fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox spacing="12.0">
          <children>
-            <HBox prefHeight="65.0" prefWidth="480.0" spacing="30.0">
+            <HBox spacing="30.0">
                <children>
-                  <VBox prefHeight="65.0" prefWidth="107.0">
+                  <VBox spacing="8.0">
                      <children>
-                        <Text fx:id="tTitle" fill="#4747ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="250.0">
+                        <Text fx:id="tTitle" fill="#4477ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="250.0">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <HBox prefHeight="21.0" prefWidth="107.0">
+                        <HBox>
                            <children>
-                              <Text fx:id="tGenero" strokeType="OUTSIDE" strokeWidth="0.0" text="Genero" />
-                              <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="7.0" />
-                              <Text fx:id="tDuracion" strokeType="OUTSIDE" strokeWidth="0.0" text="Duracion" />
+                              <Text fx:id="tGender" fill="#00000080" strokeType="OUTSIDE" strokeWidth="0.0" text="Genero" />
+                              <Text fill="#00000080" strokeType="OUTSIDE" strokeWidth="0.0" text=" | " />
+                              <Text fx:id="tDuration" fill="#00000080" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" />
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <Separator orientation="VERTICAL" prefHeight="65.0" prefWidth="9.0" />
-                  <VBox prefHeight="200.0" prefWidth="100.0">
+                  <Separator orientation="VERTICAL" />
+                  <VBox spacing="8.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entrada:">
                            <font>
-                              <Font name="System Bold" size="17.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font>
                         </Text>
-                        <Text fx:id="tTicket" fill="#ff479f" strokeType="OUTSIDE" strokeWidth="0.0" text="S/.00.00">
+                        <Text fx:id="tTicket" fill="#ff479f" strokeType="OUTSIDE" strokeWidth="0.0" text="S/. 00.00">
                            <font>
-                              <Font name="System Bold" size="31.0" />
+                              <Font name="System Bold" size="32.0" />
                            </font>
                         </Text>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="19.0" prefWidth="480.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Formato:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <HBox fx:id="hbFormatBtnBox" spacing="8.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <HBox fx:id="hbDateBtnBox" spacing="8.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hora:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <HBox fx:id="hbTimeBtnBox" spacing="8.0" />
+            <HBox alignment="TOP_RIGHT">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Formato:">
+                  <Button mnemonicParsing="false" onAction="#handleContinueClick" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #4747ff; -fx-background-radius: 8;" text="Continuar" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox fx:id="hbFormatBtnBox" prefHeight="0.0" prefWidth="480.0" spacing="12.0" />
-            <HBox prefHeight="19.0" prefWidth="480.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox fx:id="hbDateBtnBox" prefHeight="0.0" prefWidth="480.0" spacing="12.0" />
-            <HBox prefHeight="19.0" prefWidth="480.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hora:">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox fx:id="hbTimeBtnBox" prefHeight="0.0" prefWidth="480.0" spacing="12.0" />
-            <HBox alignment="BOTTOM_RIGHT" prefHeight="86.0" prefWidth="480.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#handleContinueButton" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #4747ff; -fx-background-radius: 8;" text="Continuar" textFill="WHITE">
                      <effect>
                         <DropShadow offsetY="4.0">
                            <color>
@@ -95,9 +86,6 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
                   </Button>
                </children>
             </HBox>

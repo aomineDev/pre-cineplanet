@@ -32,10 +32,10 @@ public class MovieView {
     private Text tTicket;
 
     @FXML
-    private Text tDuracion;
+    private Text tDuration;
 
     @FXML
-    private Text tGenero;
+    private Text tGender;
 
     @FXML
     private Text tTitle;
@@ -60,8 +60,8 @@ public class MovieView {
 
         //parte visual elementos
         tTitle.setText(movie.getTitle() + " - " + movie.getCategory());
-        tGenero.setText(movie.getGender());
-        tDuracion.setText(movie.getFormattedDuration());
+        tGender.setText(movie.getGender());
+        tDuration.setText(movie.getFormattedDuration());
         
         //guardar la lista de formatos de la base de datos
         formatList = movie.getFormatList();
@@ -235,7 +235,7 @@ public class MovieView {
     }
 
     @FXML
-    void handleContinueButton(ActionEvent event) throws IOException {
+    void handleContinueClick(ActionEvent event) throws IOException {
         
         App.setRoot("seatView");
 
