@@ -28,7 +28,8 @@ public class MoviesView {
         tUserName.setText(moviesController.getStoreUser().getUsername());
 
         for(Movie movie: moviesController.getMovieList()) {
-            Image image = new Image(getClass().getResource("/utp/images/movies/" + movie.getCover()).toString());
+            Image image = new Image(getClass().getResource("/utp/images/movies/" 
+            + movie.getCover()).toString());
             ImageView imageView = new ImageView(image);
             imageView.setCursor(Cursor.HAND);
 

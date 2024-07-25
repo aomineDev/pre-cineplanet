@@ -63,7 +63,6 @@ public class MovieView {
         tGenero.setText(movie.getGender());
         tDuracion.setText(movie.getFormattedDuration());
         
-        
         //guardar la lista de formatos de la base de datos
         formatList = movie.getFormatList();
         //muestra los formatos en base al metodo creado
