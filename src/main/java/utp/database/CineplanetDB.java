@@ -49,8 +49,13 @@ public class CineplanetDB {
     timeList.add(new Time(LocalTime.of(18, 30), 1));
     seatList.add(new Seat(1, 1));
 
+    timeList.add(new Time(LocalTime.of(15, 00), 2));
+    seatList.add(new Seat(2, 1));
+
     //Fecha 1
     dateList.add(new Date(LocalDate.of(2024, 05, 17), timeList));
+    dateList.add(new Date(LocalDate.of(2024, 05, 18), timeList));
+    dateList.add(new Date(LocalDate.of(2024, 05, 20), timeList));
 
     //formato1
     formatList.add(new Format("2D", 12.00, dateList));

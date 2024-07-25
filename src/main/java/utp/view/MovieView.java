@@ -194,6 +194,7 @@ public class MovieView {
         Button button = (Button) event.getSource();
         Date date = (Date) button.getUserData();
 
+        deleteActiveClass(hbDateBtnBox);
         button.getStyleClass().add("active");
 
         //obtiene los elementos de esa fecha
@@ -211,6 +212,7 @@ public class MovieView {
         Button button = (Button) event.getSource();
         Time time = (Time) button.getUserData();
 
+        deleteActiveClass(hbTimeBtnBox);
         button.getStyleClass().add("active");
 
         //enviar
