@@ -76,6 +76,7 @@ public class CineplanetDB {
     movieList.add(new Movie("John Wick: Sin control ", "john-wick.png", "Accion", "C", false, LocalTime.of(1, 41) ,formatList));
     movieList.add(new Movie("El Planeta De Los Simios: Nuevo Reino", "kingdom-of-the planet-of-the-apes.png", "Accion", "B", false, LocalTime.of(2, 25) ,formatList));
     movieList.add(new Movie("Role-play", "role-play.png", "Accion", "R", false, LocalTime.of(1, 40), formatList));
+    movieList.add(new Movie("Orion-and-the-Dark", "orion-and-the-dark.png", "Animacion", "TV-Y7", false, LocalTime.of(1, 33), formatList));
   }
   
   //patron de diseño singleton
